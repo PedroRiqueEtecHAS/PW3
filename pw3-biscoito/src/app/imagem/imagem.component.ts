@@ -10,4 +10,5 @@ export class ImagemComponent {
   biscoitoQuebrado: string ="../../assets/biscoito-quebrado.png"
   @Input() trocar : string = ""
 
+  
 }
