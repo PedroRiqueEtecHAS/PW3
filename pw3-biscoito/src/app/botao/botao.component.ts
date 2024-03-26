@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output,  } from '@angular/core';
+
 
 @Component({
   selector: 'app-botao',
@@ -6,9 +7,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./botao.component.css']
 })
 export class BotaoComponent {
-  @Input() mostrar: boolean = false;
-  indicar: boolean = false
-  indicar2: boolean = false
+
+  @Output() resultado = new EventEmitter
+
+
+ QuebrarBotao(){
+    this.resultado.emit({trocar: true})
+  }
 
 
   }
