@@ -1,4 +1,4 @@
-<app-imagem [quebrar]="quebrar" (resultado)="capturar($event)" ></app-imagem>
-<app-botao ></app-botao>
-<app-frase ></app-frase>
+<app-imagem [quebrar]="quebrar"  ></app-imagem>
+<app-frase [quebrar]="quebrar" [valor]="valor"></app-frase>
+<app-botao (resultado)="capturar($event)" (numero)="capturar2($event)" ></app-botao>
 

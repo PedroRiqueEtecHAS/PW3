@@ -12,9 +12,9 @@ import { Component, Input, Output } from '@angular/core';
 export class ImagemComponent {
   biscoitoInteiro: string ="../../assets/biscoito.png"
   biscoitoQuebrado: string ="../../assets/biscoito-quebrado.png"
-  @Input() quebrar : boolean = false;
+  @Input() quebrar : boolean = true;
 
-  capturar(event: any){
+  capturar2(event: any){
     this.quebrar = event.trocar
   }
 }

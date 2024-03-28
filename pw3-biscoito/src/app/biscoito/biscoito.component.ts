@@ -6,10 +6,15 @@ import { Component, Input, Output } from '@angular/core';
   styleUrls: ['./biscoito.component.css']
 })
 export class BiscoitoComponent {
-  quebrar : boolean = false;
+  quebrar : boolean = true;
+  valor : number = 0;
 
   capturar(event: any){
     this.quebrar = event.trocar
+  }
+
+  capturar2(event: any){
+    this.valor = event.trocarN
   }
 
 }
