@@ -13,6 +13,6 @@ export class AleatorioComponent {
 
   gerar(){
     let valor = Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
-    this.resultado.emit({numeroGerado: valor});
+    this.resultado.emit({quebrar: valor});
   }
 }
