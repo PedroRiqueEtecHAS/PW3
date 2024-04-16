@@ -1,0 +1,8 @@
+
+<div [ngSwitch]="numero">
+  <div *ngSwitchCase="1"  class= "block1">Valor é {{numero}}</div>
+  <div *ngSwitchCase="2" class="block2">Valor é {{numero}}</div>
+  <div *ngSwitchCase="3" class="block3">Valor é {{numero}}</div>
+  <div *ngSwitchCase="4" class="block4">Valor é {{numero}}</div>
+</div>
+<button (click)="incrementar()" >Incrementar</button>

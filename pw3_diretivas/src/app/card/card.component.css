@@ -1,0 +1,19 @@
+.card {
+	width: 260px;
+	margin: 5px;
+	float:left;
+	border-width:1px;
+	border-style:solid;
+  padding-left: 10px;
+}
+.header {
+	color: blue
+}
+.content {
+	color: black
+}
+
+.footer {
+	color: orange
+}
+

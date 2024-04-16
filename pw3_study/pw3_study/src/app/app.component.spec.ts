@@ -1,8 +1,10 @@
 import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
+    imports: [RouterTestingModule],
     declarations: [AppComponent]
   }));
 
@@ -12,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'pw3-diretivas'`, () => {
+  it(`should have as title 'pw3_study'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('pw3-diretivas');
+    expect(app.title).toEqual('pw3_study');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('pw3-diretivas app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('pw3_study app is running!');
   });
 });

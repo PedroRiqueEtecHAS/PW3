@@ -2,14 +2,10 @@
   <li>Item para todos</li>
   <li>Item para todos</li>
   <li>Item para todos</li>
-  <li *ngIf="!autenticado; else naoAutenticado">Somente usuário autenticado</li>
+  <li *ngIf="autenticado; else naoAutenticado">Item para autenticados</li> <!-- ngif nn mostra ao inspecionar, o hidden mostra-->
 </ul>
 <button (click)="autenticar()">Logar</button>
-<button (click)="deslogar()" [hidden]="!autenticado">Deslogar</button>
 
 <ng-template #naoAutenticado>
-  <p>VOCE ESTA LOGADO</p>
+  <p>Você não esta logado!!!</p>
 </ng-template>
-
-
-

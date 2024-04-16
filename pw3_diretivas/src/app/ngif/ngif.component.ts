@@ -6,14 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./ngif.component.css']
 })
 export class NgifComponent {
-
-    autenticado: boolean = false;
-
-    autenticar(){
-      this.autenticado = true;
-    }
-
-    deslogar(){
-      this.autenticado = false;
-    }
+  autenticado: boolean = false;
+  autenticar(){
+    this.autenticado = true;
+  }
 }

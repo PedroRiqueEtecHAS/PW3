@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./ngfor.component.css']
 })
 export class NgforComponent {
-  professores: string[] = ["Marion","Edson","Guilherme","Giovanne","Adriano"];
-
+  professor: string[] = ["Marion", "Edson", "Guilherme", "Adriano", "Rogério"];
 }
