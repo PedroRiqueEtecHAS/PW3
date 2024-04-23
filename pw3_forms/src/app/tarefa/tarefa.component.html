@@ -1,0 +1,53 @@
+
+<div id="formulario">
+  <h1>Relate Seu Problema</h1>
+  <form class="example-forme">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Resumo</mat-label>
+      <input matInput placeholder="" value="">
+    </mat-form-field>
+
+
+  <br />
+
+  <mat-radio-group aria-label="Select an option">
+    <mat-label>Tipo de Problemas</mat-label>
+    <mat-radio-button value="1">Tarefa</mat-radio-button>
+    <mat-radio-button value="2">Bug</mat-radio-button>
+  </mat-radio-group>
+
+
+
+  <br />
+  <mat-form-field>
+    <mat-label>Prioridade</mat-label>
+    <mat-select>
+      <mat-option value="Critica">Critica</mat-option>
+      <mat-option value="Alta">Alta</mat-option>
+      <mat-option value="Media">Media</mat-option>
+      <mat-option value="Baixa">Baixa</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Prazo Final</mat-label>
+    <input matInput placeholder="" value="">
+  </mat-form-field>
+
+  <br />
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Descrição do Problema</mat-label>
+    <textarea matInput placeholder=""></textarea>
+  </mat-form-field>
+
+  <br />
+
+  <button mat-raised-button>Enviar</button>
+
+  </form>
+</div>

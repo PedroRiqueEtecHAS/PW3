@@ -1,0 +1,16 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 30%;
+}
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+#formulario{
+  margin-top: 20px;
+  margin-left: 20px;
+}
