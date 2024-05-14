@@ -4,7 +4,9 @@
       <mat-label>Nome</mat-label>
       <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
 
-      <mat-error *ngIf="false">Nome é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.nome.hasError('required')">Nome é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.nome.hasError('minlength')">Deve ter entre 3 a 35 caracteres</mat-error>
+
 
   </mat-form-field>
 
@@ -14,8 +16,8 @@
       <mat-label>E-mail</mat-label>
       <input matInput placeholder="Ex. horacio@etec.sp.gov.br"  formControlName="email" >
 
-      <mat-error *ngIf="false">E-mail é obrigatório</mat-error>
-      <mat-error *ngIf="false">E-mail inválido</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">E-mail é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('email')">E-mail inválido</mat-error>
 
   </mat-form-field>
 
@@ -24,6 +26,7 @@
   <mat-form-field class="example-full-width">
       <mat-label>Nome de Usuário</mat-label>
       <input matInput placeholder="Ex. horacio.augusto"  formControlName="usuario">
+      <mat-error *ngIf="cadastroForm.controls.usuario.hasError('contemEspacos')">Nome de usuario não deve ter espaços</mat-error>
 
       <mat-error *ngIf="false">Nome de Usuário inválido</mat-error>
   </mat-form-field>
