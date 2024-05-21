@@ -1,11 +1,13 @@
+<h1>Cadastro</h1>
 <form class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
-
+  <div id="form">
   <mat-form-field class="example-full-width">
       <mat-label>Nome</mat-label>
       <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
 
       <mat-error *ngIf="cadastroForm.controls.nome.hasError('required')">Nome é obrigatório</mat-error>
       <mat-error *ngIf="cadastroForm.controls.nome.hasError('minlength')">Deve ter entre 3 a 35 caracteres</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.nome.hasError('maxlength')">Deve ter entre 3 a 35 caracteres</mat-error>
 
 
   </mat-form-field>
@@ -27,8 +29,8 @@
       <mat-label>Nome de Usuário</mat-label>
       <input matInput placeholder="Ex. horacio.augusto"  formControlName="usuario">
       <mat-error *ngIf="cadastroForm.controls.usuario.hasError('contemEspacos')">Nome de usuario não deve ter espaços</mat-error>
-
-      <mat-error *ngIf="false">Nome de Usuário inválido</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.usuario.hasError('required')">Nome de usuário obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.usuario.hasError('maxlength')">Máximo 15 caracteres</mat-error>
   </mat-form-field>
 
   <br />
@@ -40,7 +42,10 @@
         <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
 
-      <mat-error *ngIf="false">Senha é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.senha.hasError('required')">Senha é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.senha.hasError('minlength')">Senha é necessário ter 8 caracteres</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.senha.hasError('maxlength')">Senha é necessário ter no máximo 16 caracteres</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.senha.hasError('pattern')">Necessário número, letra maiúscula ou caractere especial</mat-error>
 
     </mat-form-field>
 
@@ -53,13 +58,14 @@
         <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
 
-      <mat-error *ngIf="false">Confirmar senha é obrigatório</mat-error>
-      <mat-error *ngIf="false">As senhas devem ser as mesmas</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.confirmaSenha.hasError('required')">Confirmar senha é obrigatório</mat-error>
+      <mat-error *ngIf="cadastroForm.controls.confirmaSenha.hasError('mesmasSenhas')">As senhas devem ser as mesmas</mat-error>
 
     </mat-form-field>
 
   <br />
 
-  <button mat-flat-button color="primary">Enviar</button>
-
+  <button id="button" mat-flat-button>Enviar</button>
+  </div>
 </form>
+<h1>Henrique e Pedro Soares</h1>

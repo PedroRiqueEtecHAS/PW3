@@ -1,4 +1,4 @@
-import { AbstractControl } from "@angular/forms";
+import { AbstractControl, ValidationErrors } from "@angular/forms";
 
 export class CustomValidator {
 
@@ -16,4 +16,23 @@ export class CustomValidator {
 
     }
   }
+  static mesmasSenhas (senha: string, confirmaSenha: string) {
+    return (formGroup: AbstractControl): ValidationErrors | null => {
+      const senhaControl = formGroup.get(senha);
+      const confirmaSenhaControl = formGroup.get(confirmaSenha);
+
+      if (!senhaControl || !confirmaSenhaControl) {
+        return null;
+      }
+
+      if (senhaControl.value !== confirmaSenhaControl.value){
+        confirmaSenhaControl.setErrors({senhaDiferentes: true});
+        return{ senhaDiferentes: true};
+      }else{
+        confirmaSenhaControl.setErrors(null);
+        return null
+      }
+    }
+  }
 }
+
