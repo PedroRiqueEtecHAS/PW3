@@ -1,16 +1,30 @@
+
 .example-card {
   max-width: 400px;
+  color: #000;
+  background: #fff;
+  border-radius: 5%;
 }
 
 .example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url('../../assets/icon1.jpeg');
   background-size: cover;
-}
-.mat-grid-tile {
-
 }
 #back{
   background-image: url(../../assets/2.png);
   background-size: cover;
+}
+.button-d{
+  background: #2B3E44;
+  width: 30%;
+  height: 3.5vh;
+  border-radius: 8%;
+}
+.text-d{
+  color: #fff;
+  text-decoration: none;
+}
+mat-card-title{
+  font-size: 2.5vh;
 }
 
